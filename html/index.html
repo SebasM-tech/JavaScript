@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Practica</title>
+</head>
+
+<body>
+    <p>ingrese nombre</p>
+    <input type="text" id="UserName">
+    <button onclick="saludarUsuario()">Saludar</button>
+
+    <script>
+        function saludarUsuario(){
+            const miNombre = document.getElementById("UserName").value
+            alert("Hola " + miNombre)
+        }
+    </script>
+</body>
+</html>

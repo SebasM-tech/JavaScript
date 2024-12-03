@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/Styles.css">
+    <title>Date</title>
+</head>
+<body onload="startWatch()">
+    <div class="container">
+        <input type="number" name="ingrese tiempo" id="time">
+        <button onclick="starTime()">Alert</button>
+        <h1 id="message">00:00:00</h1>
+    </div>
+
+    <audio id="audio" src="alarma.mp3" type="audio/mp3" >
+
+    </audio>
+    
+    <script>
+        const timeUP = document.getElementById("time");
+        const textAlarmElement = document.getElementById("message");
+        const soundAlarmElement = document.getElementById("audio");
+
+        function starTime(){
+            setTimeout(timesUP, 1000 * timeUP.value);
+        }
+
+        function timesUP(){
+           textAlarmElement.style.color = "red"
+           soundAlarmElement.play();
+        }
+
+        function setTime(){
+            setInterval(Timer, 1000);
+        }
+
+        function timer(){
+            const currentTime = new Date();
+            const hour = currentTime.getHours();
+            const minutes = currentTime.getMinutes();
+            const seconds = currentTime.getSeconds();
+
+            const HoutText = hour + ":" + minutes + ":" + seconds;
+            textAlarmElement.textContent = HourText;
+        }
+    </script>
+
+</body>
+</html>

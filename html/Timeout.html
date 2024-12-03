@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="ingrese tiempo" id="time">
+    <button onclick="starTime()">Alert</button>
+    <h1 style="color: green;" id="message">ON</h1>
+    
+    <script>
+        const timeUP = document.getElementById("time");
+        const textAlarmElement = document.getElementById("message")
+
+        function starTime(){
+            setTimeout(timesUP, 1000 * timeUP.value);
+        }
+
+        function timesUP(){
+           textAlarmElement.textContent = "OFF";
+           textAlarmElement.style.color = "red"
+        }
+    </script>
+
+</body>
+</html>
