@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parameters</title>
+</head>
+<body>
+    <p>Ingresa primer numero</p>
+    <input type="number" id="firstNumber">
+
+    <p>Ingresa segundo numero</p>
+    <input type="number" id="secondNumber">
+
+    <button onclick="getResult()">Obtener resultado</button>
+    <h1 id="result">0</h1>
+
+    <script>
+        function getResult(){
+            const number1 = document.getElementById("firstNumber")
+            const number2 = document.getElementById("secondNumber")
+            const salida = document.getElementById("result")
+            function mostrarResultado(){
+                resultado = number1.value + number2.value;
+                return resultado;
+            }
+         
+            salida.textContent = mostrarResultado()
+        }
+
+    </script >
+</body>
+</html>
