@@ -13,19 +13,22 @@
     <input type="number" id="secondNumber">
 
     <button onclick="getResult()">Obtener resultado</button>
-    <h1 id="result">0</h1>
+    <h1 id="salida">0</h1>
 
     <script>
+        function sumar(numero1, numero2){
+            resultado = +numero1 + +numero2
+            return resultado
+        }
+
         function getResult(){
             const number1 = document.getElementById("firstNumber")
             const number2 = document.getElementById("secondNumber")
-            const salida = document.getElementById("result")
-            function mostrarResultado(){
-                resultado = number1.value + number2.value;
-                return resultado;
-            }
-         
-            salida.textContent = mostrarResultado()
+            const resultado1 = document.getElementById("salida")
+            const SUMAR = sumar(number1.value, number2.value)
+
+            resultado1.textContent = SUMAR;
+            
         }
 
     </script >
