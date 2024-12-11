@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencia This</title>
+</head>
+<body>
+    <script>
+
+        const perro = {
+            nombre : "simba",
+            raza : "shit su",
+            edad : 4 ,
+
+                ladrar(){
+                    console.log("guau");
+                },
+
+                saludar(){
+                    console.log("Hola soy " + this.nombre) //se refiere al objeto actual 
+                }
+            };  
+            
+                function cumplirAños(){
+                    perro.edad = perro.edad + 1 
+                }
+
+
+
+                perro["Color"] = "rojo";
+
+                perro.edad = 15
+
+        //se llama en console con el objeto.atributo // o con el objeto.metodo()
+
+        const perro2 = {
+            nombre : "paul",
+            raza : "husky",
+            edad : 4 ,
+
+                ladrar(){
+                    console.log("guau");
+                },
+
+                saludar(){
+                    console.log("Hola soy " + this.nombre) //se refiere al objeto actual 
+                }
+            };  
+
+            perro2.edad = 8;
+    </script>
+</body>
+</html>

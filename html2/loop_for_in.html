@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        function perro(raza, edad) {
+            this.patas= 4 ,
+            this.raza = raza,   //la primera "this,raza" es la propiedad y el = raza es el parametro ya definido
+            this.edad = edad,
+            this.ladrar = function(){
+                    console.log("guau");
+                }
+        };  
+
+        const simba = new perro("caniche" , 6);
+        const pepe = new perro("doberman" , 2);
+        
+        for(const caracteristica in simba){
+            console.log(caracteristica + ": " + simba[caracteristica]);
+        }
+    </script>
+</body>
+</html>

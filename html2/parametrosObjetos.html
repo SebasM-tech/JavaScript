@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        function perro(raza, edad) {
+            this.patas= 4 ,
+            this.raza = raza,   //la primera "this,raza" es la propiedad y el = raza es el parametro ya definido
+            this.edad = edad,
+            this.ladrar = function(){
+                    console.log("guau");
+                }
+        };  
+
+        const simba = new perro("caniche" , 6);
+        const pepe = new perro("doberman" , 2);
+
+        function Empleado(nombre, apellido, edad, cargo) {
+            this.nombre = nombre,
+            this.apellido = apellido,
+            this.edad = edad,
+            this.cargo = cargo
+            this.presentarse = function () {
+                console.log("Hola soy " + this.nombre + " " + this.apellido + " Tengo " + this.edad + " y soy " + this.cargo);
+            }
+        };
+
+        const carlos = new Empleado("carlos" , "del rio" , 18 , "super intendente");
+        const sebastian = new Empleado("sebastian" , "montero" , 20 , "intendente");
+        const samuel = new Empleado("samuel" , "rhenals" , 19 , "super numerario");
+        const oliver = new Empleado("oliver" , "galore" , 21 , "samario");
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructores</title>
+</head>
+<body>
+    <script>
+        function pelota() {
+            this.marca = "valley";
+            this.serialName = 1;
+            this.accion = function (){
+                console.log("la pelota de la marca " + this.marca + " esta rebotando...")
+            }
+        }
+
+        const simba = new pelota();
+        const carlos = new pelota ();
+    </script>
+</body>
+</html>
