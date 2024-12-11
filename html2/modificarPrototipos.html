@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadena de protipos detallada</title>
+</head>
+<body>
+    <script>
+        function libro(autor, titulo, cantPaginas){
+            this.autor = autor,
+            this.titulo = titulo,
+            this.cantPaginas = cantPaginas;
+        }; 
+
+        const libro1 = new libro("stephen king", "misery", 350)
+
+        libro.prototype.abrirLibro = function() {
+            alert(this.titulo + " Ha sido abierto");
+        }
+        
+        libro.prototype.edicion = this.edicion;
+
+    </script>
+</body>
+</html>

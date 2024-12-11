@@ -20,11 +20,11 @@ function crearParrafoTienda(textoLabel, valorMIn){
     //se crean las etiquetas p y label
     let elementoParrafo = document.createElement("p");
 
-    let elementoLabel = document.createElement("label");  //createelement("<>") para crear una etiqueta 
+    let elementoLabel = document.createElement("label");  //createElement("<>") para crear una etiqueta 
     elementoLabel.innerText = textoLabel + ": " ;
     
     //conectar con el input 
-    elementoLabel.setAttribute("for", textoLabel) //establecer = set
+    elementoLabel.setAttribute("for", textoLabel) //establecer = setAttribute
 
     //crear input
     let elementoInput = document.createElement("input");
