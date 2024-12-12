@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FETCH</title>
+</head>
+<body>
+    <div id="nombre"></div>
+
+    <script>
+        let datosJson;
+        fetch('persona.json') //url
+        .then(res => res.json()) //.then significa "entonces" es una funcion() 
+        .then((salida) => { //salida de nuestra promesa (res)
+            datosJson = salida;
+
+            const salida1 = document.getElementById("nombre");
+            salida1.textContent = datosJson.edad;
+        })
+    </script>
+</body>
+</html>

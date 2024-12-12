@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subClasses</title>
+</head>
+<body>
+    <script>
+        class Deportista {
+            constructor(nombre, apellido){
+                this.nombre = nombre;
+                this.apellido = apellido;
+            }
+        }
+
+        class Futbolista extends Deportista{   //esta es una sub clase Futbolista que extiende de deportista
+            constructor(nombre,apellido, cantGoles){
+                super(nombre, apellido);
+                this.cantGoles = cantGoles;
+            }
+        }
+
+        const futbolista = new Futbolista("messi", "cuccitini", 872)
+    </script>
+</body>
+</html>

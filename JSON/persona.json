@@ -1,0 +1,14 @@
+{
+    "nombre" : "Carlos molnar",
+    "edad" : 17,
+    "esEstudiante" : false,
+    "direccion" : {
+        "calle" : "La ciudad de la furia",
+        "ciudad" : "Buenos aires"
+    },
+
+    "telefonos" : [
+        "222-222-222-222",
+        "555-555-555-555"
+    ]
+}
