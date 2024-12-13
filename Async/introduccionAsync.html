@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduccion programacion sincrona y asincrona</title>
+</head>
+<body>
+    <script>
+        //programacion sincronica
+        //accion 1
+        console.log("inicio del codigo sincronico");
+
+        //accion 2
+        for(i = 0; i < 10; i++){
+            console.log(i)
+        }
+
+        //accion 3
+        console.log("fin del codigo sincrono")
+
+
+        //programacion asincronica
+        //accion 1
+        console.log("inicio del codigo sincronico");
+
+        //accion 2
+        setTimeout(function(){
+            for(i = 0 ; i < 10 ; i++){
+                console.log(i)
+            }
+        }, 2*1000);
+
+        //accion 3
+        console.log("fin del codigo sincrono")
+    </script>
+    </script>
+</body>
+</html>
