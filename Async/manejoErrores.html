@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manejo errores</title>
+</head>
+<body>
+    <script>
+        /*//callbacks
+        function sumarNumeros(a,b, callback){
+            setTimeout(function() {
+                if(typeof a != "number" || typeof b != "number"){
+                    return callback(new Error("algun argumento no es un numero"));
+                }
+                callback(null, a + b)
+            }, 1000)
+        }
+
+        sumarNumeros('5', 1 , function(error, resultado) {
+            if(error){
+                console.error(error)
+            } else {
+                console.log(resultado)
+            }
+        })*/
+
+
+
+        /*//Promesas
+        function sumarNumeros(a,b){
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    if(typeof a != "number" || typeof b != "number"){
+                        reject(new Error("ambos argumentos deben ser numeros"))
+                    } else {
+                        resolve(a + b);
+                    }
+                }, 2000)
+            })
+        }
+
+        sumarNumeros('5',1)
+        .then(function(resultado) {
+            console.log(resultado)
+        })
+        .catch(function(error) {
+            console.error(error)
+        })*/
+
+
+
+        //Async / await
+        async function sumarNumeros(a,b){
+            if(typeof a != "number" || typeof b != "number") {
+                throw new Error("ambos argumentos deben ser numeros")
+            }
+            return a + b
+        }
+
+        async function manejarErrores(){
+            try{
+                let respuesta = await sumarNumeros('5',1);
+                console.log(respuesta)
+            } catch (error) {
+                console.error(error.message)
+            }
+        }
+
+        manejarErrores();
+    </script>
+</body>
+</html>

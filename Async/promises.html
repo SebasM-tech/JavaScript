@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function obtenerUsuarios() {
+            return new Promise(function(resolve, reject) {
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+                xhr.onload = function() {
+                    if(xhr.status === 200) {
+                        resolve(JSON.parse(xhr.responseText));  //es un método en JavaScript que se utiliza para convertir una cadena de texto en un objeto JSON
+                    } else {
+                        reject(xhr.statusText);
+                    }
+                }
+                xhr.send();
+            });
+        }
+
+        obtenerUsuarios()
+            .then(function(usuarios) {
+                console.log(usuarios)
+            })
+            .catch(function(error) {
+                console.error(error)
+            })
+    </script>
+</body>
+</html>
